@@ -1,0 +1,44 @@
+12-03-19
+========
+- Variable assignment
+- Only integers
+- +-*/
+- Print statement
+- Emits Java?
+
+stretch
+--------
+- Function calls
+
+================
+Evening Same Day
+================
+implementation thoughts
+-----------------------
+Lexer should return a token stream for laziness
+^^^ this seems like implementation detail maybe for factory method like
+Lexer().is_lazy()
+
+so figure out absolute interface:
+
+fn lex() will return some kind of list of Tokens
+^ a queue duhhhhhhhh
+
+AND THATS IT I THINK??
+
+Constructor will take a reader that it can read char by char <-- Nope more implementaiton
+
+
+Maybe has a setGrammarRules strategy pattern?
+
+
+
+I think i don't really need a factory what i need is a:
+lexer interface: has everything a lexer could possibly have, emit_token(), tokenize(string), lex_file(), etc... anything i can think of
+lexer impl: bunch of setters for strategies
+anyone that the lexer won't support raises: https://docs.oracle.com/javase/6/docs/api/java/lang/UnsupportedOperationException.html
+
+
+
+another idea
+so implementing the strats, say i want lazy for tokenize. 

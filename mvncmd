@@ -1,0 +1,5 @@
+mvn archetype:generate \
+	-DgroupId=com.slothropbodine.compilerplay \
+	-DartifactId=compiler-play \
+	-DarchetypeArtifactId=maven-archetype-quickstart \
+	-DarchetypeVersion=1.4 -DinteractiveMode=false
